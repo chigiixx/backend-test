@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Рантайм-данные: храним структуру папок (.gitkeep), но не сами данные
+data/logs/*
+data/storage/*
+data/emails/*
+!data/logs/.gitkeep
+!data/storage/.gitkeep
+!data/emails/.gitkeep
+
+data_test/
+.pytest_cache/
+*.egg-info/
+.DS_Store

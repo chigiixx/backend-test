@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анна Чигирева — Full-Stack разработчик</title>
+<meta name="description" content="Full-Stack разработчик: React, TypeScript, Node.js, PostgreSQL, AI-интеграции.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="#top" class="logo">anna<span class="logo-dot">.</span>dev</a>
+    <nav class="main-nav" aria-label="Разделы страницы">
+      <a href="#about"><span class="verb">GET</span> /about</a>
+      <a href="#skills"><span class="verb">GET</span> /skills</a>
+      <a href="#projects"><span class="verb">GET</span> /projects</a>
+      <a href="#contact" class="nav-cta"><span class="verb verb-post">POST</span> /contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Junior Full-Stack разработчик</p>
+        <h1>Сайты и API, которые проходят&nbsp;Lighthouse на&nbsp;90+ и&nbsp;держат форму под нагрузкой.</h1>
+        <p class="hero-lead">
+          Делаю продукт от макета до продакшена: адаптивный фронтенд на React
+          и TypeScript, backend на Node.js и Python, PostgreSQL под капотом —
+          и всегда с обработкой ошибок, которая не даёт сервису упасть. Эта
+          страница — пример: форма внизу реально отправляет запрос на мой
+          backend с AI-анализом обращений.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Обсудить проект</a>
+          <a href="#projects" class="btn btn-ghost">Смотреть проекты</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" id="hero-panel" aria-live="polite">
+        <div class="panel-bar">
+          <span class="panel-dot"></span><span class="panel-dot"></span><span class="panel-dot"></span>
+          <span class="panel-title">request</span>
+        </div>
+        <pre class="panel-body"><code id="hero-code">$ <span class="caret">_</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container section-grid">
+      <div class="section-label">
+        <span class="route"><span class="verb">GET</span> /about</span>
+        <span class="status-pill">200 OK</span>
+      </div>
+      <div class="section-body">
+        <h2>Обо мне</h2>
+        <p>
+          Сейчас работаю веб-разработчиком в «ИТР-Строй» (Нижний Новгород) —
+          с нуля спроектировала и запустила в продакшен адаптивный сайт-SPA
+          на React 19, TypeScript и Tailwind CSS, с интерактивным
+          калькулятором стоимости услуг и формой обратной связи с
+          уведомлениями. Спроектировала структуру базы данных PostgreSQL,
+          настроила резервное копирование и безопасность, довела Lighthouse
+          до 91–94.5 и полное соответствие WCAG 2.1 AA.
+        </p>
+        <p>
+          До этого успела поработать с моделированием бизнес-процессов
+          (IDEF0, BPMN) на стажировке по проектированию информационных
+          систем, администрированием серверов и баз данных в роли младшего
+          системного администратора и разработкой desktop-приложений на
+          C#. Сейчас самостоятельно изучаю Python и расширяю backend-стек —
+          этот сайт и API под ним как раз пример того, что получилось.
+        </p>
+        <dl class="about-facts">
+          <div><dt>Опыт</dt><dd>1 год 5 месяцев в веб-разработке</dd></div>
+          <div><dt>Специализация</dt><dd>Full-Stack — React/TypeScript · Node.js/Python · PostgreSQL</dd></div>
+          <div><dt>Формат работы</dt><dd>Удалённо / гибрид · готова к переезду в Москву</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container section-grid">
+      <div class="section-label">
+        <span class="route"><span class="verb">GET</span> /skills</span>
+        <span class="status-pill">200 OK</span>
+      </div>
+      <div class="section-body">
+        <h2>Стек</h2>
+
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul class="tag-list">
+            <li>React</li><li>TypeScript</li><li>Tailwind CSS</li>
+            <li>Адаптивная вёрстка</li><li>WCAG 2.1 AA</li><li>Lighthouse-оптимизация</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <ul class="tag-list">
+            <li>Node.js</li><li>Python</li><li>FastAPI</li>
+            <li>PostgreSQL</li><li>REST API</li><li>AI-интеграции (OpenAI API)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Инфраструктура и администрирование</h3>
+          <ul class="tag-list">
+            <li>Администрирование PostgreSQL</li><li>Резервное копирование</li>
+            <li>Zabbix / Nagios</li><li>PowerShell / Ansible</li><li>Безопасность ИС</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container section-grid">
+      <div class="section-label">
+        <span class="route"><span class="verb">GET</span> /projects</span>
+        <span class="status-pill">200 OK</span>
+      </div>
+      <div class="section-body">
+        <h2>Проекты</h2>
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-head">
+              <span class="verb">POST</span>
+              <span class="project-path">/api/contact</span>
+            </div>
+            <h3>Лендинг с формой обратной связи и AI-анализом</h3>
+            <p>
+              Эта страница. FastAPI-backend на Python анализирует
+              тональность и тип обращения через OpenAI API, с graceful
+              fallback на rule-based анализ при недоступности AI.
+            </p>
+            <ul class="tag-list tag-list-sm">
+              <li>FastAPI</li><li>OpenAI API</li><li>Pydantic</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <span class="verb">GET</span>
+              <span class="project-path">/itrstroy.ru</span>
+            </div>
+            <h3>Корпоративный сайт-SPA «ИТР-Строй»</h3>
+            <p>
+              Спроектировала и запустила с нуля: адаптивная вёрстка,
+              калькулятор стоимости услуг, форма заявок с уведомлениями,
+              PostgreSQL под капотом. Lighthouse 91–94.5, WCAG 2.1 AA.
+            </p>
+            <ul class="tag-list tag-list-sm">
+              <li>React 19</li><li>TypeScript</li><li>Tailwind CSS</li><li>PostgreSQL</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <span class="verb">POST</span>
+              <span class="project-path">/system-design</span>
+            </div>
+            <h3>Информационная система для строительного управления</h3>
+            <p>
+              Провела предпроектный анализ бизнес-процессов, смоделировала
+              их в IDEF0/BPMN и спроектировала систему автоматизации
+              управления проектами, ресурсами и документооборотом.
+            </p>
+            <ul class="tag-list tag-list-sm">
+              <li>IDEF0</li><li>BPMN</li><li>Анализ требований</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <span class="verb">GET</span>
+              <span class="project-path">/booking-app</span>
+            </div>
+            <h3>Десктоп-приложение для резервации мест</h3>
+            <p>
+              Самостоятельно разработала рабочее приложение по
+              техническому заданию, которое сама же и составила,
+              включая полный комплект диаграмм IDEF.
+            </p>
+            <ul class="tag-list tag-list-sm">
+              <li>C#</li><li>Windows Forms</li><li>ТЗ</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container section-grid">
+      <div class="section-label">
+        <span class="route"><span class="verb verb-post">POST</span> /contact</span>
+        <span class="status-pill" id="contact-status-pill">201 Created</span>
+      </div>
+      <div class="section-body">
+        <h2>Обсудим проект?</h2>
+        <p class="contact-lead">
+          Заполните форму — она реально уходит на мой backend: AI оценит
+          тональность и тип обращения, а я получу уведомление и отвечу при
+          первой возможности. Можно и напрямую:
+          <a href="https://t.me/chigir_lox" target="_blank" rel="noopener">Telegram</a>
+          ·
+          <a href="mailto:anyachigireva88@gmail.com">email</a>
+        </p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="field-name"><span class="field-key">name</span></label>
+            <input type="text" id="field-name" name="name" autocomplete="name"
+                   minlength="2" maxlength="100" required>
+            <p class="field-error" id="error-name" role="alert"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="field-phone"><span class="field-key">phone</span></label>
+            <input type="tel" id="field-phone" name="phone" autocomplete="tel"
+                   placeholder="+7 999 123-45-67" required>
+            <p class="field-error" id="error-phone" role="alert"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="field-email"><span class="field-key">email</span></label>
+            <input type="email" id="field-email" name="email" autocomplete="email" required>
+            <p class="field-error" id="error-email" role="alert"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="field-comment"><span class="field-key">comment</span></label>
+            <textarea id="field-comment" name="comment" rows="4"
+                      minlength="5" maxlength="2000" required></textarea>
+            <p class="field-error" id="error-comment" role="alert"></p>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              <span id="submit-btn-label">Отправить заявку</span>
+            </button>
+            <p class="form-note">Ответ придёт на e-mail, который вы указали.</p>
+          </div>
+
+          <div class="form-banner" id="form-banner" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p>© <span id="year"></span> Анна Чигирева. Full-Stack разработка.</p>
+    <p class="api-status">
+      <span class="status-dot" id="api-status-dot"></span>
+      <span id="api-status-text">проверка API…</span>
+    </p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

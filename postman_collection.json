@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Developer Landing Backend API",
+    "description": "Коллекция запросов к backend API формы обратной связи (тестовое задание).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8000" }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/api/health", "host": ["{{base_url}}"], "path": ["api", "health"] }
+      }
+    },
+    {
+      "name": "Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/api/metrics", "host": ["{{base_url}}"], "path": ["api", "metrics"] }
+      }
+    },
+    {
+      "name": "Contact - Success",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Иван Иванов\",\n  \"phone\": \"+7 999 123-45-67\",\n  \"email\": \"ivan@example.com\",\n  \"comment\": \"Отличный сайт, хочу обсудить разработку лендинга, спасибо!\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/api/contact", "host": ["{{base_url}}"], "path": ["api", "contact"] }
+      }
+    },
+    {
+      "name": "Contact - Negative comment",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Пётр Петров\",\n  \"phone\": \"+7 911 222-33-44\",\n  \"email\": \"petr@example.com\",\n  \"comment\": \"Ужасно долго грузится сайт, очень разочарован, исправьте проблему!\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/api/contact", "host": ["{{base_url}}"], "path": ["api", "contact"] }
+      }
+    },
+    {
+      "name": "Contact - Invalid email (422)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Иван\",\n  \"phone\": \"+7 999 123-45-67\",\n  \"email\": \"not-an-email\",\n  \"comment\": \"Тестовый комментарий\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/api/contact", "host": ["{{base_url}}"], "path": ["api", "contact"] }
+      }
+    },
+    {
+      "name": "Contact - Invalid phone (422)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Иван\",\n  \"phone\": \"abc\",\n  \"email\": \"ivan@example.com\",\n  \"comment\": \"Тестовый комментарий\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/api/contact", "host": ["{{base_url}}"], "path": ["api", "contact"] }
+      }
+    },
+    {
+      "name": "Contact - Comment too short (422)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Иван\",\n  \"phone\": \"+7 999 123-45-67\",\n  \"email\": \"ivan@example.com\",\n  \"comment\": \"ok\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/api/contact", "host": ["{{base_url}}"], "path": ["api", "contact"] }
+      }
+    }
+  ]
+}
