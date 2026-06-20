@@ -9,6 +9,7 @@ Backend-сервис для лендинг-презентации разрабо
 **🔗 Живая демонстрация:** https://backend-test-n9fo.onrender.com/
 
 **📑 Swagger / OpenAPI:** https://backend-test-n9fo.onrender.com/docs
+
 ---
 
 ## 1. Как запустить проект
